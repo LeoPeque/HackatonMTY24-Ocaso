@@ -3,6 +3,19 @@
 @tailwind utilities;
 
 @layer base {
+  .bg-additionalColor1 {
+    background-color: theme('colors.additionalColor1');
+  }
+  .text-additionalColor2 {
+    color: theme('colors.additionalColor2');
+  }
+  .text-whiteColor {
+    color: theme('colors.whiteColor');
+  }
+  .text-transparentColor {
+    color: theme('colors.transColor');
+  }
+  
   :root {
     --background: 0 0% 100%;
     --foreground: 224 71.4% 4.1%;
@@ -66,4 +79,65 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/Roboto-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/Roboto-Thin.ttf') format('truetype');
+  font-weight: 100; /* Thin weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/Roboto-Light.ttf') format('truetype');
+  font-weight: 300; /* Light weight */
+  font-style: normal;
+}
+
+.fade-in-animation {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.fade-out-animation {
+  opacity: 1;
+  animation: fadeOut 0.1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+.red-button {
+  background-color: darkorange;
+  color: white;
+  border: none;
+  border-radius: 3rem; /* Adjust the value as needed */
+}
+
+.red-button:hover {
+  background-color: darkred;
 }
